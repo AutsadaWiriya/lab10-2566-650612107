@@ -36,13 +36,16 @@ export default function RandomUserPage() {
       setIsFirstLoad(false);
       return;
     }
-
     const strGenAmount = JSON.stringify(genAmount);
     localStorage.setItem("genAmount", strGenAmount);
   }, [genAmount]);
 
   useEffect(() => {
     const strGenAmount = localStorage.getItem("genAmount");
+    if (strGenAmount === null) {
+      setGenAmount(1);
+      return;
+    }
     
     const loadedGenAmount = JSON.parse(strGenAmount);
     setGenAmount(loadedGenAmount);
