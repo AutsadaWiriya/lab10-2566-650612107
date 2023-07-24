@@ -42,7 +42,6 @@ export default function RandomUserPage() {
   }, [genAmount]);
 
   useEffect(() => {
-
     const strGenAmount = localStorage.getItem("genAmount");
     
     const loadedGenAmount = JSON.parse(strGenAmount);
