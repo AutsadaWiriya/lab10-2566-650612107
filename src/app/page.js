@@ -3,7 +3,6 @@
 import { UserCard } from "@/components/UserCard";
 import { cleanUser } from "@/libs/cleanUser";
 import axios from "axios";
-import { nanoid } from "nanoid";
 import { useEffect, useState } from "react";
 
 export default function RandomUserPage() {
